@@ -1,6 +1,7 @@
 import Foundation
 
 public struct Day1 {
+    
     public static func Star1(_ input: String) -> Int {
         let lines = input.components(separatedBy: .newlines)
         
@@ -8,7 +9,6 @@ public struct Day1 {
     }
     
     public static func Star2(_ input: String) -> Int {
-        
         let replacements = [
             "one": "one1one",
             "two": "two2two",
