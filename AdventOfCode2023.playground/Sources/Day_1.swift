@@ -4,14 +4,7 @@ public struct Day1 {
     public static func Star1(_ input: String) -> Int {
         let lines = input.components(separatedBy: .newlines)
         
-        var numberArray = [Int]()
-        
-        for line in lines {
-            let num1 = line.first { $0.isNumber }
-            let num2 = line.last { $0.isNumber }
-            numberArray.append(Int("\(num1 ?? "0")\(num2 ?? "0")") ?? 0)
-        }
-        return numberArray.reduce(0, +)
+        return getSum(lines)
     }
     
     public static func Star2(_ input: String) -> Int {
@@ -36,6 +29,10 @@ public struct Day1 {
         
         let lines = editedInput.components(separatedBy: .newlines)
         
+        return getSum(lines)
+    }
+    
+    private static func getSum(_ lines: [String]) -> Int {
         var numberArray = [Int]()
         
         for line in lines {
